@@ -68,30 +68,9 @@ const Home = () => {
           </Grid>
 
           <Grid className={classes.center} item md={4} sm={12} xs={12} >
-            {/* <AppBar className={classes.appBarSearch} position="static" color="inherit">
-              <TextField name='search'
-                variant='outlined'
-                label='Search note'
-                fullWidth
-                value={search}
-                onChange={(e) => {
-                  setSearch(e.target.value);
-                }}
-                onKeyPress={handleKeyPress}
-              />
-              <ChipInput style={{ margin: '10px 0' }}
-                value={tags}
-                onAdd={handleAdd}
-                onDelete={handleDelete}
-                label="Search Tags"
-                color='outlined'
-              />
-              <Button onClick={searchPost} className={classes.searchButton} color='primary' variant='contained'>Search</Button>
-            </AppBar> */}
+            
             <Form currentId={currentId} setCurrentId={setCurrentId} />
-            {/* <Paper elevation={6}>
-              <Pagination />
-            </Paper> */}
+            
           </Grid>
         </Grid>
       </Container>
