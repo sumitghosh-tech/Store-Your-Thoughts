@@ -24,8 +24,7 @@ export const signin = async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: "Something went wrong" });
   }
-};  //signin function returns oldUser and tokden which are received by client\src\actions\auth.js->{data} function of signin function
-
+}; 
 export const signup = async (req, res) => {
   const { email, password, firstName, lastName } = req.body;
 
@@ -46,4 +45,4 @@ export const signup = async (req, res) => {
     
     console.log(error);
   }
-};  //signup function returns result and token which are received by client\src\actions\auth.js->{data} function of signup function
+}; 
