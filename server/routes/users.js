@@ -5,6 +5,6 @@ import auth from "../middleware/auth.js";
 
 const router=express.Router();
 
-router.post("/signin",signin)  //http://localhost:5000/user/signin 
-router.post("/signup",signup)  //http://localhost:5000/user/signup
+router.post("/signin",signin)  
+router.post("/signup",signup)  
 export default router;
