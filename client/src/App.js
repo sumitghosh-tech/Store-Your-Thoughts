@@ -15,9 +15,6 @@ const App = () =>{
       <Container maxWidth="lg">
       <Navbar />
         <Routes>
-          {/* <Route path='/'  element={<Navigate to="/posts"  replace={true}  />}/>             */}
-          {/* <Route path='/' exact  element={<Home />}/>       */}
-          {/* <Route path='/posts/search' exact  element={<Home />}/>       */}
           <Route path='/' exact  element={<Home />}/>      
           <Route path='/posts/:id' exact  element={<PostDetails />}/>      
           <Route path='/auth' exact  element={(!user ? <Auth/> : <Navigate to="/posts" replace={true}/>)}/>      
@@ -34,6 +31,3 @@ const App = () =>{
 
 export default App;
 
-
-//<Route path='/' exact element={<Home />}/> it means when / is routed, then Home  is shown  / can be routed be clicking Memories button of Navbar component
-//<Route path='/auth' exact  element={<Auth />}/> it means when /auth is routed, then Auth is shown  /auth can be routed be clicking Memories button of Navbar component
