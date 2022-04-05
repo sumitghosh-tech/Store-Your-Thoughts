@@ -3,8 +3,6 @@
 import * as api from '../api/index.js';
 
 
-//  getPosts, createPost are actions creator.
-//  api.fetchPosts(), api.createPost(post) are backend.
 export const getPosts = () => async (dispatch) => {
   try {
     //dispatch({type:"START_LOADING"});
