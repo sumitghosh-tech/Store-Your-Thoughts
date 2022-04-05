@@ -8,7 +8,7 @@ Here is the link : https://store-your-thoughts.netlify.app/
 
 
 
-And BackEnd part has been deployed at heroku.com
+And BackEnd part has been deployed at heroku.
 
 
 
