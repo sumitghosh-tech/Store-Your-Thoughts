@@ -18,7 +18,7 @@ const App = () =>{
           <Route path='/' exact  element={<Home />}/>      
           <Route path='/posts/:id' exact  element={<PostDetails />}/>      
           <Route path='/auth' exact  element={(!user ? <Auth/> : <Navigate to="/posts" replace={true}/>)}/>      
-          {/* <Route path='/auth' exact  element={<Auth/>}/> */}
+         
         </Routes>
         
         
