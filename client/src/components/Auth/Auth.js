@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import LockOutLinedIcon from "@material-ui/icons/LockOutlined";
-import { GoogleLogin } from "react-google-login";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { signup, signin } from "../../actions/auth.js";
@@ -43,20 +42,7 @@ const Auth = () => {
     isSignUp ? setIsSignUp(false) : setIsSignUp(true)
     setShowPassword(false);
   }
-  const googleSuccess = async (res) => {
-    const result = res?.profileObj;
-    const token = res?.tokenId;
-    //console.log(res,result,token);
-    try {
-      dispatch({ type: "AUTH", data: { result, token } });
-      navigate("/");  //after authentication redirect to home
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  const googleFailure = (error) => {
-    console.log("signin fails", error);
-  }
+  
   return (
     <Container component="main" maxWidth="xs">
       <Paper className= {classes.paper}  elevation={3}>
@@ -84,22 +70,7 @@ const Auth = () => {
             }
           </Grid>
           <Button type="submit" className={classes.signin} fullWidth variant="contained" color="primary" >{isSignUp ? "Sign Up" : "Sign In"}</Button>
-          <GoogleLogin
-            clientId="GOOGLE_CLIENT_ID"
-            render={(renderProps) => (
-              <Button className={classes.googleButton}
-                color="primary"
-                fullWidth
-                onClick={renderProps.onClick}
-                startIcon={<Icon />}
-                variant="contained">
-                Google Sign In
-              </Button>
-            )}
-            onSuccess={googleSuccess}
-            onFailure={googleFailure}
-            cookiePolicy="single_host_origin"
-          />
+          
           <Grid container justifyContent="center">
             <Grid item>
             <Button onClick={switchMode}>
